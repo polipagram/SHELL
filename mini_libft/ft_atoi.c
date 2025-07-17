@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbouarfa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kbouarfa@student.1337.ma <kbouarfa>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 23:33:19 by kbouarfa          #+#    #+#             */
-/*   Updated: 2024/11/13 23:23:04 by kbouarfa         ###   ########.fr       */
+/*   Updated: 2025/07/17 02:38:25 by kbouarfa@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+
 
 int	ft_atoi(char *str)
 {

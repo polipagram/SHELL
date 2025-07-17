@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbouarfa <kbouarfa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kbouarfa@student.1337.ma <kbouarfa>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 23:43:35 by kbouarfa          #+#    #+#             */
-/*   Updated: 2024/11/13 17:54:19 by kbouarfa         ###   ########.fr       */
+/*   Created: 2025/07/17 02:04:30 by kbouarfa          #+#    #+#             */
+/*   Updated: 2025/07/17 02:38:25 by kbouarfa@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int    ft_isspace(char k)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-	{
-		i++;
-	}
-	return (i);
+	if ((k >= 9 && k <= 13) || k == 32)
+		return (1);
+	return (0);
 }

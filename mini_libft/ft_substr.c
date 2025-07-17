@@ -43,7 +43,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 /*
 int	main(void)
 {
-	char	str[] = "flymetothemoon";
+	char	str[] = "flymetothemoon";vc       	
+	  			
 
 	printf("%s\n", ft_substr(str, 6, 9));
 	return (0);

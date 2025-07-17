@@ -4,7 +4,7 @@ CFLAGS= -Wall -Wextra -Werror
 
 RDFLAG = -lreadline
 
-SRCS = minishell.c
+SRCS = minishell.c parsing.c parsing2.c expantion.c
 
 OBJS = $(SRCS:.c=.o)
 
