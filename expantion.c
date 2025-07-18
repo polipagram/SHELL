@@ -6,11 +6,22 @@
 /*   By: kbouarfa@student.1337.ma <kbouarfa>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 23:07:00 by kbouarfa          #+#    #+#             */
-/*   Updated: 2025/07/17 02:39:53 by kbouarfa@st      ###   ########.fr       */
+/*   Updated: 2025/07/17 03:03:42 by kbouarfa@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
+
+char  *get_env_value(t_env *list, const char *key)
+{
+  while(list)
+  {
+    if(ft_strcmp(head->key, key) == 0)
+        return(list->value);
+      list = list->next;
+  }
+  return NULL;
+}
 
 int   ft_tablen(char **table)
 {
@@ -60,6 +71,18 @@ static char  *get_key(char *str)
   return (key);
 }
 // 10
+
+/* while (str[i])
+{
+if (str[i])
+  i++;
+  while (str[i] != '\'')
+      i++;
+  i++;
+} */
+
+
+
 
 // H O M E = / h o m e \0
 

@@ -100,5 +100,5 @@ t_shell *tokenize(const char *s) {
             s += len;
         }
     }
-    return head;
+    return (head);
 }

@@ -6,7 +6,7 @@
 /*   By: kbouarfa@student.1337.ma <kbouarfa>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 17:31:41 by kbouarfa          #+#    #+#             */
-/*   Updated: 2025/07/17 02:38:25 by kbouarfa@st      ###   ########.fr       */
+/*   Updated: 2025/07/17 17:33:10 by kbouarfa@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,30 @@ void	print_list(t_env *env)
 	}
 }
 
+int		check_quote(char *input)
+{
+	int i;
+	char quote;
+
+	i = 0;
+	while(input[i])
+	{
+		if(input[i] == '\'' || input[i] == '"')
+		{
+				quote = input[i];
+				i++;
+		}
+		i++;
+		if(input[i] && quote)
+			return(1);
+	}
+	return(0);
+}
+
 int	main(int ac, char **av, char **env)
 {
-	// char	*input;
-	// t_shell	*tokens;
+	char	*input;
+	t_shell	*tokens;
 	t_env	*vars;
 
   (void)av;
@@ -42,14 +62,15 @@ int	main(int ac, char **av, char **env)
 //   copy_env(&env);
 	env_to_list(&vars, env);
 	print_list(vars);
-	// while (1)
-	// {
-    // 		input = readline("minishell$ ");
-    // 		if (!input)
-	// 		      break;
-	// 	  tokens = lexer(input);
-	// 	print_tokens(tokens);
-	// 	free(input);
-	// }
+	while (1)
+	{
+    	input = readline("minishell$> ");
+    	if (!input)
+		      break;
+		tokens = lexer(input);
+		//   expander(input);
+		print_tokens(tokens);
+		free(input);
+	}
 	return (0);
 }

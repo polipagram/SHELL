@@ -33,5 +33,7 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	**ft_split(char const *s, char c);
 int    ft_isspace(char k);
+int    ft_strcmp(char *s1, char *s2);
+
 
 #endif
